@@ -8,15 +8,11 @@ ScreenManagement:
     Widget:
         canvas:
             Rectangle:
-                source: 'wallpaper.jpg'
-                pos: self.pos
-                size: self.size
-        Label:
-            center_x: (root.width/2)
-            top: (root.top/2) + 250
-            text: "REMEMBER ME"
-            color: [0.0,0.0,0.0,1]
-            font_size: 34
+                source: 'logo.png'
+                pos: self.x + 145, self.y + 360
+                size: self.width - 250, self.height - 400
+            Color:
+                rgba: 0,0,0,1
 
         TextInput:
             id: username
@@ -52,12 +48,66 @@ ScreenManagement:
             center_x: (root.width/2) 
             top: (root.top/2)-20
             size: 90,35
-            background_color: [1.1,1.1,1]
+            background_color: [255,0,0,0.9]
+            opacity: 0.6
             valign: 'middle'
             halign: 'center'
             font_size: 18
             text: "Login"
             on_press:root.verify_credentials()
+
+        Button:
+            center_x: (root.width/2)
+            top: (root.top/2)-80
+            size: 200,35
+            background_color: [255,0,0,0.9]
+            opacity: 0.8
+            text: "Login with Google"
+            text_size: 140,35
+            halign: 'right'
+            valign: 'middle'
+            Image:  
+                source: 'google.png'
+                x: self.parent.x-7
+                y: self.parent.y+2
+                height:32
+                width:50
+
+        Button:
+            center_x: (root.width/2)
+            top: (root.top/2)-130
+            size: 200,35
+            background_color: [0,123,182,1]
+            text: "Login with LinkedIn"
+            text_size: 140,35
+            color: [0,0,0,0.9]
+            halign: 'right'
+            valign: 'middle'
+            Image:  
+                source: 'linkedin.png'
+                x: self.parent.x-9
+                y: self.parent.y+2
+                height:32
+                width:50        
+
+        Button:
+            center_x: (root.width/2)
+            top: (root.top/2)-180
+            size: 200,35
+            background_color: [59,83,153,1]
+            text: "Login with Facebook"
+            text_size: 160,35
+            color: [0,0,0,0.9]
+            halign: 'right'
+            valign: 'middle'
+            Image:  
+                source: 'facebook.png'
+                x: self.parent.x-9
+                y: self.parent.y+2
+                height:32
+                width:50               
+    
+
 
 <UserPage>:
     name: "user"
