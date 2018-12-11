@@ -1,3 +1,0 @@
-title=MyQR
-author=Suman
-orientation=potrait
